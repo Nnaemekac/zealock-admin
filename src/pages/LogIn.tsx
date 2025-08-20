@@ -26,7 +26,7 @@ const LoginPage = () => {
             <div className="xui-mt-2 xui-md-mt-4">
                 <form onSubmit={handleLogin} className="xui-form">
                     <div className="xui-form-box">
-                        <label htmlFor="apiKey">API Key</label>
+                        <label htmlFor="apiKey">Enter your Key</label>
                         <input
                             type="password"
                             id="apiKey"
