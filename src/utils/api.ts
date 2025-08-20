@@ -1,13 +1,8 @@
 import type { GeneralStats } from "../types/apiTypes";
 
 const API_BASE = 'https://api.zealock.com';
-const API_KEY = '27c2c58f015a3a9ed04202baa5f9c66c86166f29';
+const API_KEY = import.meta.env.VITE_API_KEY;
 
-/**
- * Fetches general statistics from the Zealock API
- * @returns Promise<GeneralStats>
- * @throws Error if the request fails
- */
 export const fetchGeneralStats = async (): Promise<GeneralStats> => {
   try {
     const response = await fetch(`${API_BASE}/root/general/stats?key=${API_KEY}`);
@@ -28,23 +23,3 @@ export const fetchGeneralStats = async (): Promise<GeneralStats> => {
     throw error;
   }
 };
-
-/**
- * Example of additional API functions you might need
- * 
- * export const fetchUserDetails = async (userId: string): Promise<User> => {
- *   const response = await fetch(`${API_BASE}/users/${userId}?key=${API_KEY}`);
- *   return await response.json();
- * }
- * 
- * export const updateItem = async (itemId: string, data: any): Promise<Item> => {
- *   const response = await fetch(`${API_BASE}/items/${itemId}?key=${API_KEY}`, {
- *     method: 'PUT',
- *     headers: {
- *       'Content-Type': 'application/json',
- *     },
- *     body: JSON.stringify(data),
- *   });
- *   return await response.json();
- * }
- */

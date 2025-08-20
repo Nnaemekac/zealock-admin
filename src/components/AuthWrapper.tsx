@@ -2,7 +2,7 @@ import type { ReactNode } from "react";
 import { useEffect } from "react";
 import { Outlet, Navigate } from "react-router";
 import { lazyLoadings } from "@richaadgigi/stylexui";
-import { isAuthenticated } from "../utils/auth"; // Import your auth utility
+import { isAuthenticated } from "../utils/auth";
 
 type AuthWrapperProps = {
   children?: ReactNode;
@@ -13,7 +13,6 @@ const AuthWrapper = ({ children }: AuthWrapperProps) => {
     lazyLoadings();
   }, []);
 
-  // Redirect to dashboard if user is already authenticated
   if (isAuthenticated()) {
     return <Navigate to="/dashboard" replace />;
   }
