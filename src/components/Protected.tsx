@@ -7,5 +7,5 @@ interface ProtectedProps {
 }
 
 export const Protected = ({ children }: ProtectedProps) => {
-  return isAuthenticated() ? children : <Navigate to="/login" replace />;
+  return isAuthenticated() ? children : <Navigate to="/" replace />;
 };

@@ -8,7 +8,7 @@ const LogoutModal = () => {
 
   const handleLogout = () => {
     logout();
-    navigate('/login');
+    navigate('/');
   };
 
   const closeModal = () => {
