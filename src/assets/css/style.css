@@ -1,0 +1,45 @@
+:root {
+    --brand-50: #f5f7ff;
+    --brand-100: #e8e8eb;
+    --brand-300: #c6c6d1;
+    --brand-600: #000000;
+}
+.my-masonry-grid {
+    display: -webkit-box; /* Not needed if autoprefixing */
+    display: -ms-flexbox; /* Not needed if autoprefixing */
+    display: flex;
+    margin-left: -20px; /* gutter size offset */
+    width: auto;
+}
+.my-masonry-grid_column {
+    padding-left: 20px; /* gutter size */
+    background-clip: padding-box;
+}
+.my-masonry-grid_column > * {
+  margin-bottom: 20px; /* Vertical gutter */
+}
+.xhq-image-in-gallery-box > .delete-btn {
+    top: -100%;
+    right: 8px;
+    transition: .24s;
+}
+
+.xhq-image-in-gallery-box:hover > .delete-btn {
+    top: 8px;
+}
+.xhq-chart-box canvas {
+    width: 100% !important;
+}
+.z-loading{
+    position: fixed;
+    width: calc(100% - 240px);
+    min-height: 100vh;
+    height: 100%;
+    left: 240px;
+    top: 0;
+    background-color: #FFF;
+    z-index: 999;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
